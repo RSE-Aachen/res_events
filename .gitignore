@@ -1,0 +1,4 @@
+venv/
+*.pyc
+create_db.py
+database.sqlite
