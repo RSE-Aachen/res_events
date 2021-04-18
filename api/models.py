@@ -1,4 +1,11 @@
-from .shared import db
+from sqlalchemy_utils import EmailType
+
+
+class User(db.Model):
+    __tablename__ = "Users"
+    id = db.Column(db.Integer, primary_key=True)
+    email = db.Column(EmailType, unique=True)
+    password_hash = db.Column(db.String)
 
 
 class Event(db.Model):
