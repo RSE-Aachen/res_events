@@ -1,6 +1,7 @@
 import os
 from flask import Flask
-from models import *
+from . import models
+from . import routes
 
 
 def create_app(test_config=None):
@@ -25,9 +26,11 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    db.init_app(app)
+    models.db.init_app(app)
     with app.app_context():
-        db.create_all()
+        models.db.create_all()
+
+    app.register_blueprint(routes.bp)
 
     return app
 
