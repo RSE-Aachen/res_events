@@ -3,4 +3,4 @@
 This is the backend impementation of the rse-events.org api.
 
 ## License
-The overall project is licensed under the permissive MIT license. Please see [README.md](README.md) file for details.
+The overall project is licensed under the permissive MIT license. Please see [LICENSE.md](LICENSE.md) file for details.
