@@ -12,6 +12,7 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(EmailType, unique=True)
     password_hash = db.Column(db.String)
+    is_admin = db.Column(db.Boolean)
 
 
 class Event(db.Model):
@@ -34,3 +35,18 @@ class LiveEvent(Event):
     id = db.Column(db.Integer, primary_key=True)
     location = db.Column(db.String(40))
     country = db.Column(db.String(30))
+
+
+class UserSchema(ma.SQLAlchemySchema):
+    class Meta:
+        pass
+
+
+class OnlineEventSchema(ma.SQLAlchemySchema):
+    class Meta:
+        pass
+
+
+class LiveEventSchema(ma.SQLAlchemySchema):
+    class Meta:
+        pass
