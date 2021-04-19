@@ -27,6 +27,7 @@ def create_app(test_config=None):
         pass
 
     models.db.init_app(app)
+    models.ma.init_app(app)
     with app.app_context():
         models.db.create_all()
 

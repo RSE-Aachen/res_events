@@ -1,8 +1,10 @@
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_utils import EmailType
+from flask_marshmallow import Marshmallow
 
 
 db = SQLAlchemy()
+ma = Marshmallow()
 
 
 class User(db.Model):
